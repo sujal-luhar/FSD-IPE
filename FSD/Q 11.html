@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q 11</title>
+
+    <script>
+        // Define the two arrays
+        const arr1 = [1, 3, 5, 7, 9];
+        const arr2 = [2, 4, 6, 8, 10];
+
+        // Merge both arrays using an arrow function
+        const mergeArrays = (arr1, arr2) => {
+            return [...arr1, ...arr2];
+        };
+        const mergedArr = mergeArrays(arr1, arr2);
+        console.log("Merged Array:", mergedArr);
+
+        // Find the second maximum from both arrays without sorting
+        const findSecondMax = (arr) => {
+            let max = arr[0];
+            let secondMax = arr[0];
+            for (let i = 1; i < arr.length; i++) {
+                if (arr[i] > max) {
+                    secondMax = max;
+                    max = arr[i];
+                } else if (arr[i] > secondMax && arr[i] !== max) {
+                    secondMax = arr[i];
+                }
+            }
+            return secondMax;
+        };
+        const secondMax1 = findSecondMax(arr1);
+        const secondMax2 = findSecondMax(arr2);
+        console.log("Second Maximum from Array 1:", secondMax1);
+        console.log("Second Maximum from Array 2:", secondMax2);
+
+        const sumArr = (arr) => {
+            let sum = 0;
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i];
+            }
+            return sum
+        };
+        const sum1 = sumArr(arr1);
+        const sum2 = sumArr(arr2);
+        console.log("Summation of Array 1:", sum1);
+        console.log("Summation of Array 2:", sum2);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

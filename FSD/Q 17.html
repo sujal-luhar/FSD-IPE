@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication Table</title>
+    <script>
+        function generateTable() {
+            // Get user input for rows and columns
+            const rows = parseInt(document.getElementById("rows").value);
+            const cols = parseInt(document.getElementById("cols").value);
+            
+            // Get table element
+            const table = document.getElementById("multiplication-table");
+            
+            // Clear existing table (if any)
+            table.innerHTML = "";
+            
+            // Create table rows and columns
+            for (let i = 1; i <= rows; i++) {
+                // Create new row
+                const row = document.createElement("tr");
+                
+                for (let j = 1; j <= cols; j++) {
+                    // Create new column
+                    const col = document.createElement("td");
+                    
+                    // Calculate multiplication and set as text
+                    const num = i * j;
+                    col.innerText = num;
+                    
+                    // Add column to row
+                    row.appendChild(col);
+                }
+                
+                // Add row to table
+                table.appendChild(row);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Multiplication Table</h1>
+    
+    <label for="rows">Rows:</label>
+    <input type="number" id="rows" value="5">
+    
+    <label for="cols">Columns:</label>
+    <input type="number" id="cols" value="5">
+    
+    <button onclick="generateTable()">Generate Table</button>
+    
+    <table id="multiplication-table"></table>
+</body>
+</html>

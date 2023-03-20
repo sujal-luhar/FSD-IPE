@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q 2</title>
+
+    <style>
+        .first:hover {
+            background-color: red !important;
+        }
+
+        .item:hover {
+            background-color: cyan;
+        }
+
+        pre {
+            margin: 0;
+        }
+        
+        td {
+            width: 130px;
+            text-align: left;
+            padding: 5px;
+        }
+
+        td:active {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <table border='1' rules='all'>
+        <caption>A complex table</caption>
+        <tr style="background-color: gainsboro; font-weight: bold;" class="first">
+            <td colspan="3">Invoice #123456789</td>
+            <td>14 January 2025</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <pre style="font-family: serif;">
+<strong>Pay to:</strong>
+Acme Billing Co.
+123 Main St.
+Cityville, NA 12345</pre>
+            </td>
+            <td colspan="2">
+                <pre style="font-family: serif;">
+<strong>Customer:</strong>
+John Smith
+321 Willow Way
+Southeast Northwestershire, MA 54321</pre>
+            </td>
+        </tr>
+        <tr style="background-color: gainsboro; font-weight: bold;">
+            <td>Name/Discription</td>
+            <td>Qty.</td>
+            <td>@</td>
+            <td>Cost</td>
+        </tr>
+        <tr class = 'item'>
+            <td>Paperclips</td>
+            <td>1000</td>
+            <td>0.01</td>
+            <td>10.00</td>
+        </tr>
+        <tr class = 'item'>
+            <td>Staples(box)</td>
+            <td>100</td>
+            <td>1.00</td>
+            <td>100.00</td>
+        </tr>
+        <tr>
+            <td colspan="3" style="background-color: gainsboro; font-weight: bold;">Subtotal</td>
+            <td>110.00</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="background-color: gainsboro; font-weight: bold;">Tax</td>
+            <td>8%</td>
+            <td>8.80</td>
+        </tr>
+        <tr>
+            <td colspan="3" style="background-color: gainsboro; font-weight: bold;">Grand Total</td>
+            <td>$ 118.80</td>
+        </tr>
+    </table>
+</body>
+
+</html>

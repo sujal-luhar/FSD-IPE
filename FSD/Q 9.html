@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q 9</title>
+    <style>
+        form {
+            color: teal;
+            font-family: sans-serif;
+        }
+
+        legend {
+            font-size: large;
+        }
+    </style>
+<script>
+        function highlight(field) {
+            field.style.backgroundColor = "yellow";
+        }
+
+        function unhighlight(field) {
+            field.style.backgroundColor = "";
+        }
+
+        function validateForm() {
+            var uname = document.forms["myform"]["uname"].value;
+            var p = document.forms["myform"]["p"].value;
+            var cp = document.forms["myform"]["cp"].value;
+            var uname_ = /\W/;
+
+            if (p != cp) {
+                alert("Password and Confirm Password Must Match");
+                return false;
+            }
+
+            if (uname_.test(uname)) {
+                alert("User name only contains alpha numeric characters");
+                return false;
+            }
+        }
+
+        function checkAll() {
+            let checkAllBox = document.getElementById("checkAll");
+            let otherCheckboxes = document.getElementsByName("otherCheckboxes");
+            for (let i = 0; i < otherCheckboxes.length; i++) {
+                otherCheckboxes[i].checked = checkAllBox.checked;
+            }
+        }
+
+        function updateAll() {
+            let checkAllBox = document.getElementById("checkAll");
+            let otherCheckboxes = document.getElementsByName("otherCheckboxes");
+            let allChecked = true;
+            for (let i = 0; i < otherCheckboxes.length; i++) {
+                if (!otherCheckboxes[i].checked) {
+                    allChecked = false;
+                    break;
+                }
+            }
+            checkAllBox.checked = allChecked;
+        }
+    </script>
+
+</head>
+
+<body>
+    <form action="#" method="post" align="center" name="myform">
+        <fieldset>
+            <legend align="right">Sign Up Form</legend>
+            <label>Username:
+                <input type="text" name='uname' onfocus="highlight(this)" onblur="unhighlight(this)">
+            </label> <br><br>
+
+            <label>Password:
+                <input type="password" name='p' onfocus="highlight(this)" onblur="unhighlight(this)">
+            </label> <br><br>
+
+            <label>Confirm Password:
+                <input type="password" name='cp' onfocus="highlight(this)" onblur="unhighlight(this)">
+            </label> <br><br>
+
+            <label>Hobbies:
+                <label><input type="checkbox" id="checkAll" onclick="checkAll()">All</label>
+                <label><input type="checkbox" name="otherCheckboxes" onclick="updateAll()">Chess</label>
+                <label><input type="checkbox" name="otherCheckboxes" onclick="updateAll()">Carrom</label>
+                <label><input type="checkbox" name="otherCheckboxes" onclick="updateAll()">Football</label>
+            </label> <br><br>
+
+            <label>Address:
+                <textarea cols="30" rows="2" onfocus="highlight(this)" onblur="unhighlight(this)"></textarea>
+            </label> <br><br>
+
+            <label>State:
+                <select>
+                    <option value="">Select country</option>
+                    <optgroup label="India">
+                        <option>Gujarat</option>
+                        <option>Goa</option>
+                    </optgroup>
+                    <optgroup label="America">
+                        <option>White House</option>
+                        <option>Silicon Vally</option>
+                    </optgroup>
+                </select>
+            </label> <br><br>
+            <input type="submit">
+            <input type="submit">
+        </fieldset>
+    </form>
+    
+</body>
+
+</html>

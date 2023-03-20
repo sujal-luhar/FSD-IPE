@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .banner {
+            width: 100%;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: blue;
+            position: relative;
+            animation: moveHeading 8s ease-in-out 3s infinite alternate;
+        }
+        
+
+        @keyframes moveHeading {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(-360deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+    </style>
+    <style>
+        /* Default gradient effect */
+        body {
+            background: linear-gradient(to bottom right, #4facfe, #00f2fe);
+        }
+
+        /* Gradient effect 1 */
+        .gradient-1 {
+            background: linear-gradient(to right, #f12711, #f5af19);
+        }
+
+        /* Gradient effect 2 */
+        .gradient-2 {
+            background: linear-gradient(to right, #00b4db, #0083b0);
+        }
+
+        /* Gradient effect 3 */
+        .gradient-3 {
+            background: linear-gradient(to right, #fc4a1a, #f7b733);
+        }
+
+        /* Gradient effect 4 */
+        .gradient-4 {
+            background: linear-gradient(to right, #43cea2, #185a9d);
+        }
+
+        /* Button styles */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            background: white;
+            border: none;
+            border-radius: 20px;
+            color: #4facfe;
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner">
+        <h1>Moving Heading</h1>
+    </div>
+
+
+    </head>
+
+
+    <h1>Gradient Effects</h1>
+    <p>This webpage demonstrates different gradient effects using CSS linear gradients. Click on the buttons below
+        to see each effect.</p>
+
+    <div class="gradient-1">
+        <h2>Gradient Effect 1</h2>
+        <p>This section has a red and orange gradient effect.</p>
+    </div>
+
+    <div class="gradient-2">
+        <h2>Gradient Effect 2</h2>
+        <p>This section has a blue and dark blue gradient effect.</p>
+    </div>
+
+    <div class="gradient-3">
+        <h2>Gradient Effect 3</h2>
+        <p>This section has a orange and yellow gradient effect.</p>
+    </div>
+
+    <div class="gradient-4">
+        <h2>Gradient Effect 4</h2>
+        <p>This section has a green and blue gradient effect.</p>
+    </div>
+
+    <div class="button-container">
+        <button class="button" onclick="setGradient(1)">Effect 1</button>
+        <button class="button" onclick="setGradient(2)">Effect 2</button>
+        <button class="button" onclick="setGradient(3)">Effect 3</button>
+        <button class="button" onclick="setGradient(4)">Effect 4</button>
+    </div>
+
+    <script>
+        // Change background gradient on button click
+        function setGradient(effect) {
+            switch (effect) {
+                case 1:
+                    document.body.style.background = 'linear-gradient(to right, #f12711, #f5af19)';
+                    break;
+                case 2:
+                    document.body.style.background = 'linear-gradient(to right, #00b4db, #0083b0)';
+                    break;
+                case 3:
+                    document.body.style.background = 'linear-gradient(to right, #fc4a1a, #fecfef)';
+                case 4:
+                    document.body.style.background = "linear-gradient(to right, #4facfe, #00f2fe)";
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

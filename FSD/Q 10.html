@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q 10</title>
+
+    <script>
+        class Stack {
+            constructor() {
+                this.stack = [];
+                this.size = 10;
+            }
+
+            push(value) {
+                if (this.stack.length < this.size) {
+                    this.stack.push(value);
+                } 
+                else {
+                    alert("Stack Underflow!");
+                }
+            }
+
+            pop() {
+                if (this.stack.length === 0) {
+                    console.log("Stack is empty!");
+                    return;
+                }
+                const poppedValue = this.stack.pop();
+                console.log(`Popped value: ${poppedValue}`);
+            }
+
+            display() {
+                console.log("Stack elements: ", this.stack);
+            }
+        }
+
+        const myStack = new Stack();
+
+        function pushing() {
+            const value = prompt("Enter a value to push into the stack:");
+            myStack.push(value);
+        }
+
+        function poping() {
+            myStack.pop();       
+        }
+
+        function displaying() {
+            myStack.display();
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="pushing()">PUSH</button>
+    <button onclick="poping()">POP</button>
+    <button onclick="displaying()">DISPLAY</button>
+</body>
+
+</html>

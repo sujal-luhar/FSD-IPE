@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q 1</title>
+
+    <style>
+        svg {
+            animation-name: car;
+            animation-duration: 4s;
+            position: relative;
+        }
+
+        @keyframes car {
+            0%   {left:0px; top:0px;}
+            25%  {left:800px; top:0px;}
+            50%  {left:800px; top:400px;}
+            75%  {left:0px; top:400px;}
+            100% {left:0px; top:0px;}
+        }
+    </style>
+</head>
+<body>
+    <svg height = '220' width = '300' style="background-color: antiquewhite;">
+        <rect x = '20' y = '30' width = '180' height = '30' fill = 'red' stroke = 'black' stroke-width = '2'></rect> 
+        <rect x = '20' y = '60' width = '270' height = '100' fill = 'blue' stroke = 'black' stroke-width = '2'></rect>
+        <circle cx = '70' cy = '160' r = '40' fill = 'red' stroke = 'black' stroke-width = '2'></circle>
+        <circle cx = '200' cy = '160' r = '40' fill = 'red' stroke = 'black' stroke-width = '2'></circle> 
+        <circle cx = '70' cy = '160' r = '8' fill = 'blue' stroke = 'black' stroke-width = '2'></circle>
+        <circle cx = '200' cy = '160' r = '8' fill = 'blue' stroke = 'black' stroke-width = '2'></circle>
+    </svg>
+</body>
+</html>

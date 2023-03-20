@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation bar -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home section -->
+  <section id="home">
+    <h1>Welcome to my portfolio</h1>
+    <p>Here you can learn more about my skills, projects, and achievements</p>
+  </section>
+
+  <!-- About section -->
+  <section id="about">
+    <h2>About me</h2>
+    <img src="C:\Users\luhar\Pictures\Saved Pictures\img_avatar1.png" alt="My photo">
+    <p>Insert your personal information here, such as your education, work experience, and skills.</p>
+  </section>
+
+  <!-- Projects section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-gallery">
+      <div class="project-item">
+        <a href="project1.html">
+          <img src="C:\Users\luhar\Pictures\Saved Pictures\kzyZonlB_400x400.jpg" alt="Project 1" width="350" height="350">
+          <h3>Project 1</h3>
+        </a>
+      </div>
+      <div class="project-item">
+        <a href="project2.html">
+          <img src="C:\Users\luhar\Pictures\Saved Pictures\XYZXYZ_Hardest_image_ever_generated_06f601e8-1cab-49d0-bff8-450740e122c9.png" alt="Project 2" width="350" height="350">
+          <h3>Project 2</h3>
+        </a>
+      </div>
+      <!-- Add more projects here -->
+    </div>
+  </section>
+
+  <!-- Contact section -->
+  <section id="contact">
+    <h2>Contact me</h2>
+    <form action="submit-form.php" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      <button type="submit">Send message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2023 My Portfolio. All rights reserved.</p>
+  </footer>
+</body>
+</html>
